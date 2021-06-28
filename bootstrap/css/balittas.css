@@ -1,0 +1,550 @@
+.containerImg {
+    position: relative;     
+  	width:100%;  	
+  	margin-left: 0px;
+    /*max-width: 800px;  */
+    /*margin: 0 auto; *//* Center it */
+    z-index: 0;
+}
+
+.containerImg .contentVid {
+    position: absolute; /* Position the background text */
+    top: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+}
+
+.containerImg .contentImg {
+    position: absolute; /* Position the background text */
+    top: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    height: 100%;
+    padding: 20px; /* Some padding */
+}
+.produk:hover {
+    color: #fece00;
+}
+.produk {
+    color: white;
+}
+.leafletImg {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.leafletImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modalLeaflet {
+    display: none; /* Hidden by default */
+    position: fixed;  /*Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 85px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modalLeaflet-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Add Animation */
+.modalLeaflet-content {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+        to {-webkit-transform:scale(1)}
+    }
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+        to {transform:scale(1)}
+    }
+
+/* The Close Button */
+.closeModal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+    color: #fece00;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modalLeaflet-content {
+        width: 90%;
+    }
+}
+.beritaterbaru{    
+    display: block;
+    padding: 4px;
+    margin-bottom:0px;
+    line-height: 1.42857143;
+    /*background-color: rgba(51,51,51,1);*/
+    /*border: 1px solid #dddddd;*/
+    border-radius: 5px;
+    -webkit-transition: border 0.2s ease-in-out;
+    -o-transition: border 0.2s ease-in-out;
+    transition: border 0.2s ease-in-out;
+    color : black;
+}
+.pcc{
+  background-color: grey;
+  width: auto;
+  height: 300px; 
+  text-align: center;
+  color:white;
+  font-size: 50px;
+  font-family: century;  
+}
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(36,112,101,0.8);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    border-radius: 5px;
+}
+.container2:hover .overlay {
+  width: 100%;
+
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;  
+}
+.container2 {
+  position: relative;
+  width: 100%;
+}
+.text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+/*CSS for scrolling up*/
+.scrolltop {
+    display:none;
+    width:100%;
+    margin:0 auto;
+    position:fixed;
+    bottom:20px;
+    right:10px; 
+}
+.scroll {
+    position:absolute;
+    right:20px;
+    bottom:20px;
+    /*background:black;*/
+    background:rgba(178,178,178,1.0);
+    padding:10px;
+    text-align: center;
+    margin: 0 0 0 0;
+    cursor:pointer;
+    transition: 0.8s;
+    -moz-transition: 0.8s;
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;        
+}
+.scroll:hover {
+    background:rgba(28,69,26,1);
+    transition: 0.8s;
+    -moz-transition: 0.8s;
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;        
+}
+.scroll:hover .glyphicon {
+    /*padding-top:-10px;*/
+    color: #fece00;
+}
+.scroll .glyphicon {
+    font-size:20px;
+    color: white;
+    /*margin-top:-5px;
+    margin-left:1px;*/
+    transition: 0.8s;
+    -moz-transition: 0.8s;
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;    
+}
+.hoverThumbnail{
+	color:#5cb85c;
+}
+.hoverThumbnail:hover{
+	color:#fece00;
+}
+.thumbnailLeaflet {
+    height: 65%;
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    -webkit-transition: border 0.2s ease-in-out;
+    -o-transition: border 0.2s ease-in-out;
+    transition: border 0.2s ease-in-out;
+}
+@media only screen and (max-device-height: 750px){
+    .thumbnailLeaflet {
+        height: 82%;
+    }
+}
+.thumbku:hover{
+  background-color: rgba(28,69,26,0.9);
+  transition: .4s ease;  
+  color:white;
+}
+.thumbku{
+  /*background-color:rgba(36,112,101,0.1); */
+  background-color:rgba(28,69,26,0.7);  
+}
+.headerHover{
+    color:white;
+}
+.headerHover:hover{
+    color:#fece00;
+    cursor: pointer;
+}
+.navbarHover{
+    background-color: rgba(28,69,26,0.3);
+}
+.navbarHover:hover{
+    background-color: rgba(28,69,26,0.95);
+    transition: .8s ease;
+}
+.teknologiBudidaya{
+    /*color:rgb(28,69,26);*/
+    color:rgb(242,97,5);
+}
+.teknologiBudidaya:hover{    
+    /*color:rgb(242,97,5);*/
+    color:orange;    
+}
+.dropbtnHeader {
+    background-color: transparent;
+    color: white;
+    padding: 13px 8px;
+    font-size: 18px;
+    border-style: none;
+}
+.dropbtnHeader:hover{
+    color:#fece00;
+    cursor: default;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdownHeader {
+    position: relative;
+    display: inline-block;
+
+}
+
+/* Dropdown Content (Hidden by Default) */
+/*255,222,55*/
+.dropdownHeader-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255,222,55,1);
+    min-width: 425px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 2px;    
+}
+
+/* Links inside the dropdown */
+.dropdownHeader-content a {
+    color: rgba(28,69,26,1);
+    padding: 5px 16px 5px 5px;
+    text-decoration: none;
+    display: block;
+    border-radius: 2px;
+}
+
+.dropdownHeader-content a:hover {color:#fece00;background-color:  rgba(28,69,26,0.8);}
+
+.dropdownHeader:hover .dropdownHeader-content {display: block;}
+
+.dropdownHeader:hover .dropbtnHeader {background-color: transparent;}
+
+.itemZoom {
+  border-radius: 6px;
+  overflow: hidden;
+}
+.itemZoom .imageZoom {
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.itemZoom:hover .imageZoom {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/*PAGINATION CUSTOM */
+.pagerCustom {
+  font-family: Calibri;  
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 0;
+  margin: 20px 0px;
+  list-style: none;
+  text-align: center;
+}
+.pagerCustom li {
+  display: inline;
+}
+.pagerCustom li > a,
+.pagerCustom li > span {
+  display: inline-block;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+
+ul.paginationKu li
+{
+    margin-left:10px;
+}
+
+ul.paginationKu li a
+{
+    color:rgba(28, 69, 26);    
+    text-align: center;
+    text-decoration:none;
+    padding:9px 10px 10px 10px;
+    background-color: rgba(36,112,101,0.1);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+ul.paginationKu li a:hover,
+ul.paginationKu li a.current
+{
+    color:#fece00;
+    background:rgba(28, 69, 26);
+}
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fece00; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9; 
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+.accordion {
+    background-color: rgb(28,69,26);
+    color: #fece00;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.accordion:after {
+    color: #fece00;
+    content: '\002B';
+    font-weight: bold;
+    font-size: 20px;
+    float: right;
+    margin-left: 5px;
+}
+
+.actived, .accordion:hover {
+    background-color: rgba(28,69,26,0.3);
+    color: rgb(28,69,26); 
+}
+
+.actived:after {
+    color: rgb(28,69,26);
+    content: "\2212";
+}
+
+.panel {
+    /*padding: 0 18px;*/
+    display: none;
+    background-color: rgba(36,112,101,0.1);
+    overflow: hidden;
+}
+
+.matche-cnt{
+    margin-left: 10px;
+    font-size: 14px;
+    color: #999;
+    font-weight: normal;
+}
+
+/* The Modal (background) */
+.modalSlider {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 85px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modalSlider-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 70%;
+  max-width: 750px;
+}
+
+.modalSlider-content {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+/* The Close Button */
+.closeSlider {
+  color: white;
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.closeSlider:hover,
+.closeSlider:focus {
+  color: #fece00;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlidesSlider {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prevSlider,
+.nextSlider {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  background-color: rgba(255,255,255,0.2);
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.nextSlider {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prevSlider:hover,
+.nextSlider:hover {
+  background-color: #fece00;
+  color: white;
+}
+
+/* Number text (1/3 etc) */
+.numbertextSlider {
+  margin-left: -260px;
+  color: #f2f2f2;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.captionSlider-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
